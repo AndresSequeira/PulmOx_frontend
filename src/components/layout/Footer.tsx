@@ -4,6 +4,7 @@ import { contactConfig } from "../../config/contact";
 import { navigationItems } from "../../data/navigation";
 import { services } from "../../data/services";
 import { createWhatsAppUrl } from "../../utils/whatsapp";
+import { siteImages } from "../../config/images";
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
       <div className="shell grid gap-8 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2 text-xl font-semibold">
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-primary">PO</span>
+            <img src={siteImages.logoRounded} alt="Logo redondo" className="size-16" />
             PulmOx Costa Rica
           </div>
           <p className="mt-4 max-w-sm text-sm leading-6 text-blue-100">
@@ -45,7 +46,7 @@ export function Footer() {
         </div>
       </div>
       <div className="shell mt-10 border-t border-white/10 pt-6 text-sm text-blue-100">
-        <p>© {new Date().getFullYear()} PulmOx Costa Rica. Derechos reservados. Politica de privacidad y terminos preparados para agregar.</p>
+        <p>© {new Date().getFullYear()} PulmOx Costa Rica. Derechos reservados.</p>
       </div>
     </footer>
   );
