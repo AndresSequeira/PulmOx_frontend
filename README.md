@@ -1,72 +1,53 @@
-# PulmOx Costa Rica Frontend
+# PulmOx Frontend
 
-Frontend corporativo para PulmOx Costa Rica construido con Vite, React, TypeScript, Tailwind CSS, React Router DOM y Lucide React.
+Frontend corporativo desarrollado para PulmOx Costa Rica.
 
-## Comandos
+El proyecto implementa una experiencia web responsive y mobile-first para presentar la informacion institucional, servicios, sedes, especialistas, catalogo informativo de equipos medicos y canales de contacto.
+
+## Tecnologias
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Lucide React
+
+## Requisitos
+
+- Node.js
+- npm
+
+## Instalacion
 
 ```bash
 npm install
+```
+
+## Desarrollo
+
+```bash
 npm run dev
+```
+
+## Validacion
+
+```bash
 npm run lint
 npm run build
 ```
 
-## Estructura
+## Estructura general
 
-- `src/config`: configuracion del sitio, contacto, colores indirectos e imagenes.
-- `src/data`: servicios, equipos, categorias, sedes, doctores, FAQ y navegacion.
-- `src/types`: interfaces TypeScript compartidas.
-- `src/utils`: relaciones locales y generador de URL de WhatsApp.
-- `src/components`: componentes reutilizables comunes y de layout.
-- `src/pages`: paginas y rutas dinamicas.
-- `public/images`: imagenes reemplazables del sitio.
+- `src/components`: componentes reutilizables de interfaz y layout.
+- `src/pages`: paginas principales y vistas dinamicas.
+- `src/data`: contenido local tipado utilizado por el sitio.
+- `src/config`: configuraciones generales del sitio.
+- `src/utils`: utilidades compartidas.
+- `src/types`: definiciones TypeScript.
+- `public/images`: recursos visuales publicos.
 
-## Como modificar colores y Kanit
-
-Los colores principales estan en `tailwind.config.ts`:
-
-- Blanco: `brand.white` = `#FFFFFF`
-- Azul principal: `brand.primary` = `#006CFF`
-
-La fuente Kanit esta importada en `src/index.css` y configurada como `font-kanit` en Tailwind.
-
-## Como cambiar WhatsApp y contacto
-
-Edite `src/config/contact.ts`:
-
-- `whatsappNumber`
-- `phoneNumber`
-- `email`
-- `address`
-- redes sociales
-
-Los enlaces se generan con `src/utils/whatsapp.ts`.
-
-## Como reemplazar las imagenes
-
-Coloque los archivos dentro de `public/images/` y edite las rutas en:
-
-- `src/config/images.ts`
-- `src/data/services.ts`
-- `src/data/equipment.ts`
-- `src/data/locations.ts`
-- `src/data/doctors.ts`
-
-Si una imagen no existe, `ResponsiveImage` muestra un placeholder visual y evita iconos de imagen rota.
-
-## Como agregar contenido
-
-Agregue servicios en `src/data/services.ts`. Cada servicio necesita `id`, `slug`, textos, imagen, beneficios, proceso y `whatsappMessage`.
-
-Agregue equipos en `src/data/equipment.ts`. Las categorias estan en `src/data/equipmentCategories.ts`.
-
-Agregue sedes en `src/data/locations.ts`. Configure direccion, telefono, WhatsApp, mapa, horarios, `serviceIds` y `doctorIds`.
-
-Agregue doctores en `src/data/doctors.ts`. Relacione cada doctor con `locationIds` y `serviceIds`.
-
-Las relaciones se resuelven en `src/utils/relations.ts`; no duplique informacion manualmente dentro de las paginas.
-
-## Rutas
+## Rutas principales
 
 - `/`
 - `/nosotros`
@@ -79,12 +60,15 @@ Las relaciones se resuelven en `src/utils/relations.ts`; no duplique informacion
 - `/sedes/:slug`
 - `/doctores`
 - `/contacto`
-- `/404`
 
-## Publicacion
+## Build de produccion
 
-Ejecute `npm run build`. El resultado de produccion queda en `dist/` y puede publicarse en cualquier hosting estatico compatible con Vite.
+```bash
+npm run build
+```
 
-## Valores por reemplazar
+El resultado se genera en la carpeta `dist/`.
 
-Busque `REEMPLAZAR_` en `src/config` y `src/data` para completar telefonos, correos, direcciones, mapas, doctores, modelos y horarios definitivos.
+## Notas
+
+Este repositorio contiene el frontend del sitio. No incluye backend, base de datos, carrito de compras, pasarela de pago ni panel administrativo.
