@@ -1,0 +1,50 @@
+import type { Location } from "../types";
+
+const editableHours = [
+  { day: "Lunes a viernes", note: "REEMPLAZAR_HORARIO" },
+  { day: "Sabado", note: "REEMPLAZAR_HORARIO" },
+  { day: "Domingo", closed: true, note: "Cerrado o REEMPLAZAR_HORARIO" },
+];
+
+export const locations: Location[] = [
+  {
+    id: "escazu",
+    slug: "escazu",
+    name: "Sede Escazu",
+    shortDescription: "Sede preparada para reemplazar direccion, horario y servicios finales.",
+    description: "Descripcion institucional editable de la sede Escazu.",
+    address: "REEMPLAZAR_DIRECCION",
+    province: "San Jose",
+    canton: "Escazu",
+    district: "REEMPLAZAR_DISTRITO",
+    phone: "REEMPLAZAR_TELEFONO",
+    whatsapp: "REEMPLAZAR_NUMERO",
+    email: "REEMPLAZAR_CORREO",
+    mapUrl: "https://maps.google.com/?q=REEMPLAZAR_MAPA",
+    image: "/images/locations/escazu.webp",
+    serviceIds: ["neumologia", "trastornos-sueno", "equipos-respiratorios"],
+    doctorIds: ["doctor-1"],
+    businessHours: editableHours,
+    featured: true,
+  },
+  {
+    id: "san-jose",
+    slug: "san-jose",
+    name: "Sede San Jose",
+    shortDescription: "Sede editable para servicios respiratorios y camara hiperbarica.",
+    description: "Descripcion institucional editable de la sede San Jose.",
+    address: "REEMPLAZAR_DIRECCION",
+    province: "San Jose",
+    canton: "REEMPLAZAR_CANTON",
+    district: "REEMPLAZAR_DISTRITO",
+    phone: "REEMPLAZAR_TELEFONO",
+    whatsapp: "REEMPLAZAR_NUMERO",
+    email: "REEMPLAZAR_CORREO",
+    mapUrl: "https://maps.google.com/?q=REEMPLAZAR_MAPA",
+    image: "/images/locations/san-jose.webp",
+    serviceIds: ["camara-hiperbarica", "neumologia"],
+    doctorIds: ["doctor-2"],
+    businessHours: editableHours,
+    featured: true,
+  },
+];
