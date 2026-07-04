@@ -1,3 +1,4 @@
+import { publicAsset } from "../utils/assets";
 import type { Doctor } from "../types";
 
 export const doctors: Doctor[] = [
@@ -8,7 +9,7 @@ export const doctors: Doctor[] = [
     professionalTitle: "REEMPLAZAR_TITULO_PROFESIONAL",
     specialties: ["REEMPLAZAR_ESPECIALIDAD"],
     shortBiography: "Biografia breve editable del profesional.",
-    image: "/images/doctors/doctor-1.webp",
+    image: publicAsset("images/doctors/doctor-1.webp"),
     locationIds: ["escazu"],
     serviceIds: ["neumologia", "trastornos-sueno"],
     featured: true,
@@ -20,7 +21,7 @@ export const doctors: Doctor[] = [
     professionalTitle: "REEMPLAZAR_TITULO_PROFESIONAL",
     specialties: ["REEMPLAZAR_ESPECIALIDAD"],
     shortBiography: "Texto temporal claramente reemplazable.",
-    image: "/images/doctors/doctor-2.webp",
+    image: publicAsset("images/doctors/doctor-2.webp"),
     locationIds: ["san-jose"],
     serviceIds: ["camara-hiperbarica"],
     featured: true,

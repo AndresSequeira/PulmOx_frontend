@@ -1,3 +1,4 @@
+import { publicAsset } from "../utils/assets";
 import type { Location } from "../types";
 
 const editableHours = [
@@ -21,7 +22,7 @@ export const locations: Location[] = [
     whatsapp: "REEMPLAZAR_NUMERO",
     email: "REEMPLAZAR_CORREO",
     mapUrl: "https://maps.google.com/?q=REEMPLAZAR_MAPA",
-    image: "/images/locations/escazu.webp",
+    image: publicAsset("images/locations/escazu.webp"),
     serviceIds: ["neumologia", "trastornos-sueno", "equipos-respiratorios"],
     doctorIds: ["doctor-1"],
     businessHours: editableHours,
@@ -41,7 +42,7 @@ export const locations: Location[] = [
     whatsapp: "REEMPLAZAR_NUMERO",
     email: "REEMPLAZAR_CORREO",
     mapUrl: "https://maps.google.com/?q=REEMPLAZAR_MAPA",
-    image: "/images/locations/san-jose.webp",
+    image: publicAsset("images/locations/san-jose.webp"),
     serviceIds: ["camara-hiperbarica", "neumologia"],
     doctorIds: ["doctor-2"],
     businessHours: editableHours,

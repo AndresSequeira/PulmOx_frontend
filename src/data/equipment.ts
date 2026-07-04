@@ -1,3 +1,4 @@
+import { publicAsset } from "../utils/assets";
 import type { MedicalEquipment } from "../types";
 
 export const equipment: MedicalEquipment[] = [
@@ -10,7 +11,10 @@ export const equipment: MedicalEquipment[] = [
     shortDescription: "Descripcion breve editable del equipo.",
     description: "Descripcion completa editable para el concentrador de oxigeno de 5 litros.",
     features: ["Caracteristica editable", "Caracteristica editable", "Caracteristica editable"],
-    images: ["/images/equipment/yuwell-5l-01.webp", "/images/equipment/yuwell-5l-02.webp"],
+    images: [
+      publicAsset("images/equipment/yuwell-5l-01.webp"),
+      publicAsset("images/equipment/yuwell-5l-02.webp"),
+    ],
     categoryId: "concentradores",
     availableForSale: true,
     availableForRent: true,
@@ -27,7 +31,7 @@ export const equipment: MedicalEquipment[] = [
     shortDescription: "Equipo CPAP informativo para reemplazar con datos finales.",
     description: "Descripcion editable del equipo CPAP, accesorios y modalidad disponible.",
     features: ["Caracteristica editable", "Caracteristica editable", "Caracteristica editable"],
-    images: ["/images/equipment/cpap-01.webp"],
+    images: [publicAsset("images/equipment/cpap-01.webp")],
     categoryId: "cpap",
     availableForSale: true,
     availableForRent: false,
@@ -43,7 +47,7 @@ export const equipment: MedicalEquipment[] = [
     shortDescription: "Equipo BiPAP con informacion editable para venta o alquiler.",
     description: "Descripcion completa editable del equipo BiPAP y condiciones informativas.",
     features: ["Caracteristica editable", "Caracteristica editable", "Caracteristica editable"],
-    images: ["/images/equipment/bipap-01.webp"],
+    images: [publicAsset("images/equipment/bipap-01.webp")],
     categoryId: "bipap",
     availableForSale: false,
     availableForRent: true,
